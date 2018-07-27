@@ -1,2 +1,3 @@
 = Megasoft’s Calculator
+:docs:
 Megasoft’s Calculator perform basic calculations such as add,subtract,multiple,divide and factorial. This Calculator is triggered by CLI and Web APIs. 
