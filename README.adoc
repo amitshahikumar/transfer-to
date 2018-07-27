@@ -1,13 +1,13 @@
 = Megasoft’s Calculator
 
-Megasoft’s Calculator perform basic calculations such as add,subtract,multiple,divide and factorial. This Calculator is triggered by CLI and Web APIs.
+Megasoft’s Calculator performs basic calculations such as add, subtract, multiply, divide and factorial. This Calculator is triggered by CLI and Web APIs.
 
 Integration types are:
 
 * CLI
 * Web APIs
 
-Web APIs Intgration document is attached in project only.(Api Document.pdf)
+The Web APIs Integration document is attached in the project only. (Api Document.pdf)
 
 == Installation and Getting Started
 
