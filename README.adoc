@@ -72,6 +72,111 @@ OutPut:
 	ok 7 - [POST /calculator] Division Request successful
 	1..7
 ----
+== CLI Examples
 
+Addition Example
+[indent=0]
+----
+	$ perl Calculator.pl
+----
+Output:
+[indent=0]
+----
+	Welecome to Megasoft calculator
 
+	1) Add
+	2) Subtract
+	3) Multiple
+	4) Divide
+	5) Factorial
+	Select Operation : 1
+	Enter First number: 10
+	Enter Second number: 10
+	Result of 10 + 10 = 20
 
+----
+Multiplication Example
+[indent=0]
+----
+	$ perl Calculator.pl
+----
+Output:
+[indent=0]
+----
+	Welecome to Megasoft calculator
+
+	1) Add
+	2) Subtract
+	3) Multiple
+	4) Divide
+	5) Factorial
+	Select Operation : 3
+	Enter First number: 10
+	Enter Second number: 10
+	Result of 10 * 10 = 100
+
+----
+Factorial Example
+[indent=0]
+----
+	$ perl Calculator.pl
+----
+Output:
+[indent=0]
+----
+	Welecome to Megasoft calculator
+
+	1) Add
+	2) Subtract
+	3) Multiple
+	4) Divide
+	5) Factorial
+	Select Operation : 5
+	Enter First number: 5
+	Factorial of 5 = 120
+----
+Same way you try for subtraction and division.
+
+== Web Examples
+
+I have already attached IDD documnet with project itself. You whould take help of that document for integration.
+
+Strat server:
+[indent=0]
+----
+	$ plackup -r bin/app.psgi
+----
+Factorial Example
+[indent=0]
+----
+URL: http://localhost:5000/factorial/10
+Method: GET
+Response Body:
+	{
+	    "result": 3628800,
+	    "factorial_of": "10"
+	}
+----
+
+Addition Example
+[indent=0]
+----
+URL: http://localhost:5000/calculator
+Method: POST
+Request Body:
+	{
+	       "Number1":"20",
+	       "Number2":"10",
+	       "Operation":"+"
+	}
+Response Body:
+	{
+	    "Number2": "10",
+	    "Operation": "+",
+	    "Number1": "20",
+	    "Result": 30
+	}
+----
+Same way you try for multiplication, subtraction and division. 
+
+== Thanks,
