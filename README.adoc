@@ -141,7 +141,7 @@ Same way you try for subtraction and division.
 
 I have already attached IDD documnet with project itself. You whould take help of that document for integration.
 
-Strat server:
+Start server:
 [indent=0]
 ----
 	$ plackup -r bin/app.psgi
