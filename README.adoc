@@ -3,7 +3,7 @@
 Megasoft’s Calculator perform basic calculations such as add,subtract,multiple,divide and factorial. This Calculator is triggered by CLI and Web APIs.
 
 Integration types are:
-t
+
 * CLI
 * Web APIs
 
@@ -22,3 +22,56 @@ Install dancer2 Framework:
 ----
 	$ sudo apt-get install libdancer2-perl
 ----
+
+Create dancer2 App:
+[indent=0]
+----
+	$ dancer2 -a restexample::App
+----
+It will create one project in the same directory with the name of rest example::App.
+
+Clone this project inside your created project.
+
+== Test Case run
+[indent=0]
+----
+	$ perl -Ilib test/testcase.t
+----
+OutPut:
+[indent=0]
+----
+	[restexample::App:1872] core @2018-07-27 05:05:00> looking for get /factorial/5 in /usr/share/perl5/Dancer2/Core/App.pm l. 1210
+	[restexample::App:1872] core @2018-07-27 05:05:00> Entering hook core.app.before_request in (eval 62) l. 1
+	[restexample::App:1872] core @2018-07-27 05:05:00> Entering hook core.app.after_request in (eval 62) l. 1
+	ok 1 - [GET /] Request successful
+	ok 2 - got expected response structure for GET /factorial/5
+	[restexample::App:1872] core @2018-07-27 05:05:00> looking for get /factorial in /usr/share/perl5/Dancer2/Core/App.pm l. 1210
+	[restexample::App:1872] core @2018-07-27 05:05:00> Entering hook core.error.init in (eval 62) l. 1
+	[restexample::App:1872] core @2018-07-27 05:05:00> Entering hook core.error.before in (eval 62) l. 1
+	[restexample::App:1872] core @2018-07-27 05:05:00> Entering hook core.error.after in (eval 62) l. 1
+	ok 3 - [GET /] Page Not Found
+	[restexample::App:1872] core @2018-07-27 05:05:00> looking for post /calculator in /usr/share/perl5/Dancer2/Core/App.pm l. 1210
+	[restexample::App:1872] core @2018-07-27 05:05:00> Entering hook core.app.before_request in (eval 62) l. 1
+	Use of uninitialized value $number1 in string ne at lib/restexample/App.pm line 15.
+	[restexample::App:1872] core @2018-07-27 05:05:00> Entering hook core.app.after_request in (eval 62) l. 1
+	ok 4 - [POST /calculator] Addition Request successful
+	[restexample::App:1872] core @2018-07-27 05:05:00> looking for post /calculator in /usr/share/perl5/Dancer2/Core/App.pm l. 1210
+	[restexample::App:1872] core @2018-07-27 05:05:00> Entering hook core.app.before_request in (eval 62) l. 1
+	Use of uninitialized value $number1 in string ne at lib/restexample/App.pm line 15.
+	[restexample::App:1872] core @2018-07-27 05:05:00> Entering hook core.app.after_request in (eval 62) l. 1
+	ok 5 - [POST /calculator] Subtraction Request successful
+	[restexample::App:1872] core @2018-07-27 05:05:00> looking for post /calculator in /usr/share/perl5/Dancer2/Core/App.pm l. 1210
+	[restexample::App:1872] core @2018-07-27 05:05:00> Entering hook core.app.before_request in (eval 62) l. 1
+	Use of uninitialized value $number1 in string ne at lib/restexample/App.pm line 15.
+	[restexample::App:1872] core @2018-07-27 05:05:00> Entering hook core.app.after_request in (eval 62) l. 1
+	ok 6 - [POST /calculator] Multiplication Request successful
+	[restexample::App:1872] core @2018-07-27 05:05:00> looking for post /calculator in /usr/share/perl5/Dancer2/Core/App.pm l. 1210
+	[restexample::App:1872] core @2018-07-27 05:05:00> Entering hook core.app.before_request in (eval 62) l. 1
+	Use of uninitialized value $number1 in string ne at lib/restexample/App.pm line 15.
+	[restexample::App:1872] core @2018-07-27 05:05:00> Entering hook core.app.after_request in (eval 62) l. 1
+	ok 7 - [POST /calculator] Division Request successful
+	1..7
+----
+
+
+
