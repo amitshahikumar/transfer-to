@@ -1,3 +1,24 @@
 = Megasoft’s Calculator
-:docs:
-Megasoft’s Calculator perform basic calculations such as add,subtract,multiple,divide and factorial. This Calculator is triggered by CLI and Web APIs. 
+
+Megasoft’s Calculator perform basic calculations such as add,subtract,multiple,divide and factorial. This Calculator is triggered by CLI and Web APIs.
+
+Integration types are:
+t
+* CLI
+* Web APIs
+
+Web APIs Intgration document is attached in project only.(Api Document.pdf)
+
+== Installation and Getting Started
+
+Below are the list of prerequisites which you need in order to run this project.
+
+* Ubuntu
+* Perl
+* Dancer2
+
+Install dancer2 Framework:
+[indent=0]
+----
+	$ sudo apt-get install libdancer2-perl
+----
